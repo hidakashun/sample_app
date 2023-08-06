@@ -16,7 +16,7 @@ class ListsController < ApplicationController
   def create
     @list = List.new(list_params)
     if @list.save
-      ridirect_to list_path(@list.id)
+      redirect_to list_path(@list.id)
     else
       render :index #<= new から indexに変更
     end
